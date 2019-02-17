@@ -16,8 +16,16 @@ public class OptionMenu extends AppCompatActivity {
 
     private TextView title;
 
+    private Intent in = getIntent();
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent dataIntent){
+        this.in = dataIntent;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        this.in = getIntent();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_option_menu);
 
@@ -27,12 +35,12 @@ public class OptionMenu extends AppCompatActivity {
         pantryButton   = findViewById(R.id.pantryButton);
         mealplanButton = findViewById(R.id.mealplanButton);
 
-        title.setText("Hi, " + getIntent().getStringExtra("un") + " where are we going?");
+        title.setText("Hi " + getIntent().getStringExtra("un") + "!\nWhere are we going?");
 
         cookbookButton.setOnClickListener(v -> {
             Intent intent = new Intent(OptionMenu.this, CookbookAct.class);
             intent.putExtra("cookbook", this.cookbook);
-            startActivity(intent);
+            startActivityForResult(intent, 2);
         });
         pantryButton.setOnClickListener(v -> {
             Intent intent = new Intent(OptionMenu.this, PantryAct.class);

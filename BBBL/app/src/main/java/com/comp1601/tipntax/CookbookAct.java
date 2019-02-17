@@ -9,23 +9,34 @@ import android.widget.ScrollView;
 import android.widget.Scroller;
 import android.widget.TextView;
 
+import java.io.Serializable;
+
 public class CookbookAct extends AppCompatActivity {
 
     private LinearLayout linearLayout;
     private Button defaultButton;
     private Button addRecipeButton;
 
+    private Intent in = getIntent();
+
     private Cookbook cookbook;
 
     @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent dataIntent){
+        this.in = dataIntent;
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
+        this.in = getIntent();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cookbook);
 
         linearLayout = findViewById(R.id.innerLayout);
         defaultButton = findViewById(R.id.defaultButton);
+        addRecipeButton = findViewById(R.id.addRecipeButton);
 
-        this.cookbook = (Cookbook) getIntent().getSerializableExtra("cookbook");
+        this.cookbook = (Cookbook) this.in.getSerializableExtra("cookbook");
 
         if (this.cookbook.getRecipes().length!=0){
             linearLayout.removeAllViews();
@@ -47,7 +58,8 @@ public class CookbookAct extends AppCompatActivity {
 
         addRecipeButton.setOnClickListener(v -> {
             Intent intent = new Intent(CookbookAct.this, RecipeForm.class);
-            startActivity(intent);
+            intent.putExtra("cookbook", this.cookbook);
+            startActivityForResult(intent, 1);
         });
     }
 }
