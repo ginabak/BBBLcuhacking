@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OptionMenu">
+    tools:context=".OptionMenu"
+    android:background="@drawable/lemon">
 
     <TextView
         android:id="@+id/Title"
@@ -13,7 +14,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="32dp"
-        android:text="Text"
+        android:text="TEXT"
         android:textAlignment="center"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +29,7 @@
         android:layout_marginStart="162dp"
         android:layout_marginTop="38dp"
         android:layout_marginEnd="161dp"
-        android:background="@color/CornflowerBlue"
+        android:background="@color/PowderBlue"
         android:fontFamily="sans-serif-black"
         android:text="Recipes"
         android:textAlignment="center"
@@ -45,7 +46,7 @@
         android:layout_marginStart="161dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="162dp"
-        android:background="@color/CornflowerBlue"
+        android:background="@color/PowderBlue"
         android:fontFamily="sans-serif-black"
         android:text="Pantry"
         android:textColor="@android:color/white"
@@ -61,7 +62,7 @@
         android:layout_marginStart="161dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="162dp"
-        android:background="@color/CornflowerBlue"
+        android:background="@color/PowderBlue"
         android:fontFamily="sans-serif-black"
         android:text="Meal Plan"
         android:textColor="@android:color/white"

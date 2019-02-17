@@ -4,16 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecipeDisplayAct">
+    tools:context=".RecipeDisplayAct"
+    android:background="@drawable/lemon">
 
     <TextView
         android:id="@+id/title"
         android:layout_width="142dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
+        android:background="@color/PowderBlue"
         android:fontFamily="sans-serif-black"
         android:text="recipe"
         android:textAlignment="center"
+        android:textColor="@color/White"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -22,7 +25,7 @@
 
     <ScrollView
         android:id="@+id/scrollList"
-        android:layout_width="395dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="85dp"
@@ -30,20 +33,23 @@
         android:layout_marginBottom="120dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:id="@+id/innerLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/defaultIngredient"
-                android:layout_width="142dp"
+                android:layout_width="384dp"
                 android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
                 android:text="ingredient"
                 android:textAlignment="center"
                 android:textSize="30sp"

@@ -22,12 +22,6 @@ public class CookbookAct extends AppCompatActivity {
     private Cookbook cookbook;
 
     @Override
-    public void onBackPressed(){
-        setResult(RESULT_OK, getIntent().putExtra("cookbook", this.cookbook));
-        finish();
-    }
-
-    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent dataIntent){
         finish();
         startActivity(getIntent().putExtra("cookbook",dataIntent.getSerializableExtra("cookbook")));

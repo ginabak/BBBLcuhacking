@@ -20,8 +20,8 @@ public class OptionMenu extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent dataIntent){
-        finish();
-        startActivity(dataIntent);
+        //finish();
+        //startActivity(dataIntent);
     }
 
     @Override
@@ -41,7 +41,7 @@ public class OptionMenu extends AppCompatActivity {
         cookbookButton.setOnClickListener(v -> {
             Intent intent = new Intent(OptionMenu.this, CookbookAct.class);
             intent.putExtra("cookbook", this.cookbook);
-            startActivityForResult(intent, 2);
+            startActivity(intent);
         });
         pantryButton.setOnClickListener(v -> {
             Intent intent = new Intent(OptionMenu.this, PantryAct.class);

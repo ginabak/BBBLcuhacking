@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6495ED</color>
+    <color name="colorPrimary">#B0E0E6</color>
     <color name="colorPrimaryDark">#B0E0E6</color>
     <color name="colorAccent">#FFF0F5</color>
     <color name="Primary">#008577</color>
@@ -98,7 +98,7 @@
     <color name="DarkRed">#8B0000</color>
     <color name="BlueViolet">#8A2BE2</color>
     <color name="LightSkyBlue">#87CEFA</color>
-    <color name="SkyBlue">#87CEEB</color>
+    <color name="SkyBlue">#D6ECF5</color>
     <color name="Gray">#808080</color>
     <color name="Olive">#808000</color>
     <color name="Purple">#800080</color>

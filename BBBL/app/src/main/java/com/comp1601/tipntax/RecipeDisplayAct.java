@@ -31,7 +31,7 @@ public class RecipeDisplayAct extends AppCompatActivity {
             linearLayout.removeAllViews();
             for (Ingredient ing : cookbook.getRecipes()[i].getIngredients()) {
                 TextView t = new TextView(RecipeDisplayAct.this);
-                t.setText(ing.getQty() + " arbitrary units of " + ing.getName());
+                t.setText(ing.getQty() + " units of " + ing.getName());
                 t.setLayoutParams(defaultText.getLayoutParams());
                 linearLayout.addView(t);
             }
