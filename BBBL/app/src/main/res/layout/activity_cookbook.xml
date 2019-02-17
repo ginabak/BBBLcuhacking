@@ -44,7 +44,9 @@
                 android:id="@+id/defaultButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/CornflowerBlue"
                 android:text="None"
+                android:textColor="@color/White"
                 tools:layout_editor_absoluteX="215dp"
                 tools:layout_editor_absoluteY="203dp" />
 
