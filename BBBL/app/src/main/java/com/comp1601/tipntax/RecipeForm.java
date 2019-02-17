@@ -24,6 +24,7 @@ public class RecipeForm extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        System.out.println("Recepie form creating");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe_form);
 
@@ -86,6 +87,5 @@ public class RecipeForm extends AppCompatActivity {
                 finish();
             }
         });
-
     }
 }

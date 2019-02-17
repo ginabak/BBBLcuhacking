@@ -17,18 +17,25 @@ public class CookbookAct extends AppCompatActivity {
     private Button defaultButton;
     private Button addRecipeButton;
 
-    private Intent in = getIntent();
+    private Intent in;
 
     private Cookbook cookbook;
 
     @Override
+    public void onBackPressed(){
+        setResult(RESULT_OK, getIntent().putExtra("cookbook", this.cookbook));
+        finish();
+    }
+
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent dataIntent){
-        this.in = dataIntent;
+        finish();
+        startActivity(getIntent().putExtra("cookbook",dataIntent.getSerializableExtra("cookbook")));
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        this.in = getIntent();
+        System.out.println("cookbook list creating");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cookbook);
 
@@ -36,7 +43,7 @@ public class CookbookAct extends AppCompatActivity {
         defaultButton = findViewById(R.id.defaultButton);
         addRecipeButton = findViewById(R.id.addRecipeButton);
 
-        this.cookbook = (Cookbook) this.in.getSerializableExtra("cookbook");
+        this.cookbook = (Cookbook) getIntent().getSerializableExtra("cookbook");
 
         if (this.cookbook.getRecipes().length!=0){
             linearLayout.removeAllViews();

@@ -16,16 +16,17 @@ public class OptionMenu extends AppCompatActivity {
 
     private TextView title;
 
-    private Intent in = getIntent();
+    private Intent in;
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent dataIntent){
-        this.in = dataIntent;
+        finish();
+        startActivity(dataIntent);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        this.in = getIntent();
+        System.out.println("Options creating");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_option_menu);
 
