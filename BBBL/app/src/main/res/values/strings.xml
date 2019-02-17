@@ -1,0 +1,9 @@
+<resources>
+    <string name="TITLE">BBBL CU HACKING</string>
+    <string name="GREETING">WELCOME TO YOUR OWN PERSONALIZED COOKBOOK!</string>
+    <string name="NAME_PROMPT">NAME</string>
+    <string name="ENTER">ENTER</string>
+    <string name="MENU">MENU</string>
+    <string name="app_name">BBL COOKBOOK</string>
+
+</resources>
